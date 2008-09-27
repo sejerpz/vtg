@@ -54,7 +54,7 @@ first in the secondary context and then in the primary.
 This program was originally written to quickly prototipe the completion
 engine and as an aid to learn libvala internals.
 
-If enanched can be useful to provide the completion functionality to
+If enhanced can be useful to provide the completion functionality to
 other application by issuing command & query on the standard input and
 receiving the responses on the standard output in a client / server like
 model.
