@@ -1,0 +1,32 @@
+#labels Phase-Deploy,Featured
+#How to compile and install Vala Toys for GEdit
+
+== Compiling ==
+
+First at the moment you need vala compiler 0.3.6 - trunk:
+
+{{{
+svn checkout http://svn.gnome.org/svn/vala/trunk
+}}}
+
+The you need to patch the compiler with the patch included in this bug report:
+
+http://bugzilla.gnome.org/show_bug.cgi?id=553926
+
+After that you can compile _Vtg_ with:
+
+{{{
+./configure --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+./make
+}}}
+
+== Installing ==
+
+From the root folder of Vtg distribution:
+
+{{{
+mkdir ~/.gnome2/gedit/plugins/vtg
+cp -r images/ ~/.gnome2/gedit/plugins/vtg/
+cp vtg/vtg.gedit-plugin ~/.gnome2/gedit/plugins/
+cp vtg/.libs/libvtg.so ~/.gnome2/gedit/plugins/
+}}}
