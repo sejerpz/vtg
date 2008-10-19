@@ -7,11 +7,12 @@
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
  * gtksourcecompletion (at least 0.5.0) http://gtksourcecomple.sourceforge.net/ Debian packages at [http://sourceforge.net/project/showfiles.php?group_id=212508&package_id=255603&release_id=620105 source forge]
- * vala 0.3.6 (svn trunk)
+ * gnome build framework (at least 2.23.90) 
+ * vala 0.3.6 (svn trunk at least rev. 1850)
 
 == Compiling ==
 
-First at the moment you need vala compiler 0.3.6 - trunk:
+First at the moment you need vala compiler 0.3.6 - trunk (at least revision 1850):
 
 {{{
 svn checkout http://svn.gnome.org/svn/vala/trunk
