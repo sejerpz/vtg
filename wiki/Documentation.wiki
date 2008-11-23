@@ -75,7 +75,33 @@ Pressing _enter_ will filter the file list visible at the bottom of the entry.
 
 == The Editor ==
 
-When the active document is a Vala source code file two modules will
+When the active document is a Vala source code file two modules will help the develpment
 
-  * Bracket completion plugin
-  *
+  * Bracket completion module
+  * Symbol completion module
+
+=== Bracket completion ===
+
+With bracket completion on open a perenthesis will generate a matching close one or you can include a selection within " and more.
+
+_Note_: using Vtg with other gEdit bracket completion plugins will result in an unpredicatble and funny behaviour.
+
+=== Symbol completion ===
+
+Symbol completion will try to suggest possible completion items like available methods, signal etc... during the source code writing.
+
+It's strongly tied to the _Project Manager_ module so it can complete the curret item basing its information on the referenced project libraries and files, but can be used alone and it will try to infer the referenced libraries from the _'using clauses'_ of the current source file.
+
+It also provides a calltip popup where method signatures are presented to the user.
+
+_INSERT COMPLETION SCREENSHOT HERE_
+
+_INSERT CALLTIP SCREENSHOT HERE_
+
+=== Quick jump to a method ===
+
+With the help of the symbol completion engine a function similar to the _Quick jump to a project source_ but with the current source file method list is provided and binded to the menu' _Search -> Go To Method..._
+
+_INSERT QUICK JUMP TO METHOD SCREENSHOT HERE_
+
+As for the 'source file' one its possibile to use '{{{*}}}' and '?' as wildcard chars.
