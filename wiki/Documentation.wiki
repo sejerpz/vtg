@@ -18,14 +18,47 @@ Vtg supports autotools project with the help of the gnome build framework (aka l
 
 It doesn't expose to the user of the libgbf's functionalities, so you still have to edit Makefiles.am or configure.ac scripts by hand. This is intentional and wouldn't change unless libgbf will support better the specific bits of Vala in the autotool workflow.
 
-=== Opening a project ===
+=== Working with projects ===
 
 You can select a project with the menu item File -> Open project...
 
-[INSERT MENU SCREENSHOT HERE]
+_INSERT MENU SCREENSHOT HERE_
 
 After that you can see the project files on the right panel
 
-[INSERT PROJECT MANAGER SCREENSHOT HERE]
+_INSERT PROJECT MANAGER SCREENSHOT HERE_
 
 You can also open more than one project at once and select the 'currently working' project with the combobox visible on the upper border of the project manager pane.
+
+_INSERT COMBO SCREENSHOT HERE_
+
+Double clicking on a source file will open that file in a new gEdit tab or will change the active tab uf the file is already opened.
+
+Right click on a _group_ node will bring a popup menu where you can choose to open the corresponding Makefile.am file.
+
+_INSERT OPEN MAKEFILE.AM SCREENSHOT HERE_
+
+Instead right click on a _module_ node will bring a popup menu where you can choose to add a new library to the project or to open the configure.ac script
+
+_INSERT MODULE POPUP MENU SCREENSHOT HERE_
+
+=== Building and executing a project ===
+
+In the _Build_ menu you have the commands for:
+
+* _Build project_: build the project executing the make command on the project root folder
+* _Clean project_: clean the project executing the 'make clean' command on the project root folder
+* _Clean Project and Vala stamp files_: this is peculiar on how vala currently uses autotools thus this menu will clean the project as the previous one, also it will remove all tha *.stamp file presents in the vala folder
+* _Next Error_ / _Previous Error_: will jump to the source location of the next / previous error
+* _Execute_: will execute the first builded program of the project (at the moment)
+* _Stop process_: will stop (kill) the last executed program
+
+=== Quick jump to a project source ===
+
+Binded to the _Documents -> Go To Document..._ menu item there is a simple but useful functionality where you can jump to any project Vala source file.
+
+_INSERT DOCUMENT QUICK PICKER SCREENSHOT HERE_
+
+In the search / filter box it's possibile to write the name of the file using the '*' and '?' wildcard as one can normally do in the shell.
+
+Pressing _enter_ will filter the file list visible at the bottom of the entry.
