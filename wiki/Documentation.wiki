@@ -9,8 +9,11 @@ To do it Vtg gives to the developer a list of tied integrated tools to use like 
 Also it tries to minimize the use of mouse during the development.
 
 To be clear: at the moment _vala toys_ it's *not* a finished product nor in a 0.1 version shape, but I hope it will be soon.
+So don't expect the usual attention to the details that a typical GNOME application has.
 
-This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What reamins to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
+This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What remains to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
+
+A _Configure_ window where all the provided modules can be activated or deactivated and where the keybinding colud be changed it's planned but not yet coded.
 
 == Project Manager ==
 
