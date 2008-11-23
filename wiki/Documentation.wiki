@@ -2,7 +2,7 @@
 
 = Introduction =
 
-The scope of Vtg is to support the programmer at best during teh development of a Vala application.
+The scope of Vtg is to support the programmer at best during the development of a Vala application.
 
 To do it Vtg gives to the developer a list of tied integrated tools to use like _bracket or symbol completion_ and enhance the gEdit editor with some function like _quick file or method picker_.
 
