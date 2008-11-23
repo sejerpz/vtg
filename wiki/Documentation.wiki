@@ -1,3 +1,4 @@
+#labels Featured
 #Vala Toys for gEdit Documentation
 
 = Introduction =
@@ -25,25 +26,26 @@ It doesn't expose to the user of the libgbf's functionalities, so you still have
 
 You can select a project with the menu item File -> Open project...
 
-_INSERT MENU SCREENSHOT HERE_
+
+http://vtg.googlecode.com/svn/wiki/doc-images/open-project.png
 
 After that you can see the project files on the right panel
 
-_INSERT PROJECT MANAGER SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/project-manager.png
 
 You can also open more than one project at once and select the 'currently working' project with the combobox visible on the upper border of the project manager pane.
 
-_INSERT COMBO SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/project-combo.png
 
 Double clicking on a source file will open that file in a new gEdit tab or will change the active tab uf the file is already opened.
 
 Right click on a _group_ node will bring a popup menu where you can choose to open the corresponding Makefile.am file.
 
-_INSERT OPEN MAKEFILE.AM SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/open-makefile.png
 
 Instead right click on a _module_ node will bring a popup menu where you can choose to add a new library to the project or to open the configure.ac script
 
-_INSERT MODULE POPUP MENU SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/module-popup.png
 
 === Building and executing a project ===
 
@@ -58,11 +60,11 @@ In the _Build_ menu you have the commands for:
 
 It's possible to see the build log in the gEdit bottom pane:
 
-_INSERT BOTTOM PANE SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/bottom-pane.png
 
 Moreover Vtg tries to interpret the Vala compiler warning and error messages and to present them in the _Build results_ page:
 
-_INSERT BOTTOM BUILD RESULTS SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/build-results.png
 
 It's woth to notice that when executing a program its standrd input, output and error will be connected to the _Output_ page so it can be possible to interat with the target program.
 
@@ -70,7 +72,7 @@ It's woth to notice that when executing a program its standrd input, output and 
 
 Binded to the _Documents -> Go To Document..._ menu item there is a simple but useful functionality where you can jump to any project Vala source file.
 
-_INSERT DOCUMENT QUICK PICKER SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/document-jump.png
 
 In the search / filter box it's possibile to write the name of the file using the '{{{*}}}' and '?' wildcard as one can normally do in the shell.
 
@@ -97,14 +99,14 @@ It's strongly tied to the _Project Manager_ module so it can complete the curret
 
 It also provides a calltip popup where method signatures are presented to the user.
 
-_INSERT COMPLETION SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/completion-popup.png
 
-_INSERT CALLTIP SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/calltip-popup.png
 
 === Quick jump to a method ===
 
 With the help of the symbol completion engine a function similar to the _Quick jump to a project source_ but with the current source file method list is provided and binded to the menu' _Search -> Go To Method..._
 
-_INSERT QUICK JUMP TO METHOD SCREENSHOT HERE_
+http://vtg.googlecode.com/svn/wiki/doc-images/method-jump.png
 
 As for the 'source file' one its possibile to use '{{{*}}}' and '?' as wildcard chars.
