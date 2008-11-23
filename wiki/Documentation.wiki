@@ -97,9 +97,9 @@ Symbol completion will try to suggest possible completion items like available m
 
 It's strongly tied to the _Project Manager_ module so it can complete the curret item basing its information on the referenced project libraries and files, but can be used alone and it will try to infer the referenced libraries from the _'using clauses'_ of the current source file.
 
-It also provides a calltip popup where method signatures are presented to the user.
-
 http://vtg.googlecode.com/svn/wiki/doc-images/completion-popup.png
+
+It also provides a calltip popup where method signatures are presented to the user.
 
 http://vtg.googlecode.com/svn/wiki/doc-images/calltip-popup.png
 
