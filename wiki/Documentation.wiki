@@ -66,7 +66,7 @@ Moreover Vtg tries to interpret the Vala compiler warning and error messages and
 
 http://vtg.googlecode.com/svn/wiki/doc-images/build-results.png
 
-It's woth to notice that when executing a program its standrd input, output and error will be connected to the _Output_ page so it can be possible to interat with the target program.
+It's worth to notice that when executing a program its standrd input, output and error will be connected to the _Output_ page so it can be possible to interat with the target program.
 
 === Quick jump to a project source ===
 
