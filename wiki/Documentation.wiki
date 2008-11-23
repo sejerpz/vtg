@@ -12,3 +12,20 @@ To be clear: at the moment _vala toys_ it's *not* a finished product nor in a 0.
 
 This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What reamins to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
 
+== Project Manager ==
+
+Vtg supports autotools project with the help of the gnome build framework (aka libgbf) library, the same actually used by the Anjuta IDE.
+
+It doesn't expose to the user of the libgbf's functionalities, so you still have to edit Makefiles.am or configure.ac scripts by hand. This is intentional and wouldn't change unless libgbf will support better the specific bits of Vala in the autotool workflow.
+
+=== Opening a project ===
+
+You can select a project with the menu item File -> Open project...
+
+[INSERT MENU SCREENSHOT HERE]
+
+After that you can see the project files on the right panel
+
+[INSERT PROJECT MANAGER SCREENSHOT HERE]
+
+You can also open more than one project at once and select the 'currently working' project with the combobox visible on the upper border of the project manager pane.
