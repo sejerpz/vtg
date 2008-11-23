@@ -53,6 +53,16 @@ In the _Build_ menu you have the commands for:
   * _Execute_: will execute the first builded program of the project (at the moment)
   * _Stop process_: will stop (kill) the last executed program
 
+It's possible to see the build log in the gEdit bottom pane:
+
+_INSERT BOTTOM PANE SCREENSHOT HERE_
+
+Moreover Vtg tries to interpret the Vala compiler warning and error messages and to present them in the _Build results_ page:
+
+_INSERT BOTTOM BUILD RESULTS SCREENSHOT HERE_
+
+It's woth to notice that when executing a program its standrd input, output and error will be connected to the _Output_ page so it can be possible to interat with the target program.
+
 === Quick jump to a project source ===
 
 Binded to the _Documents -> Go To Document..._ menu item there is a simple but useful functionality where you can jump to any project Vala source file.
@@ -62,3 +72,10 @@ _INSERT DOCUMENT QUICK PICKER SCREENSHOT HERE_
 In the search / filter box it's possibile to write the name of the file using the '{{{*}}}' and '?' wildcard as one can normally do in the shell.
 
 Pressing _enter_ will filter the file list visible at the bottom of the entry.
+
+== The Editor ==
+
+When the active document is a Vala source code file two modules will
+
+  * Bracket completion plugin
+  *
