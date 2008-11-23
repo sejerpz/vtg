@@ -1,0 +1,14 @@
+#Vala Toys for gEdit Documentation
+
+= Introduction =
+
+The scope of Vtg is to support the programmer at best during teh development of a Vala application.
+
+To do it Vtg gives to the developer a list of tied integrated tools to use like _bracket or symbol completion_ and enhance the gEdit editor with some function like _quick file or method picker_.
+
+Also it tries to minimize the use of mouse during the development.
+
+To be clear: at the moment _vala toys_ it's *not* a finished product nor in a 0.1 version shape, but I hope it will be soon.
+
+This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What reamins to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
+
