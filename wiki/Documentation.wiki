@@ -109,4 +109,4 @@ With the help of the symbol completion engine a function similar to the _Quick j
 
 http://vtg.googlecode.com/svn/wiki/doc-images/method-jump.png
 
-As for the 'source file' one its possibile to use '{{{*}}}' and '?' as wildcard chars.
+As for the 'source file' one it's possibile to use '{{{*}}}' and '?' as wildcard chars.
