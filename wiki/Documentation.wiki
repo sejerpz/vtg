@@ -13,7 +13,7 @@ So don't expect the usual attention to the details that a typical GNOME applicat
 
 This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What remains to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
 
-A _Configure_ window where all the provided modules can be activated or deactivated and where the keybinding colud be changed it's planned but not yet coded.
+A _Configure_ window where all the provided modules can be selectively activated and where the keybinding could be changed it's planned but not yet coded.
 
 == Project Manager ==
 
