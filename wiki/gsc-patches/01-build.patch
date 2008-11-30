@@ -1,0 +1,148 @@
+Index: configure.in
+===================================================================
+--- configure.in	(revision 162)
++++ configure.in	(working copy)
+@@ -15,9 +15,12 @@
+ AC_CANONICAL_HOST
+ 
+ dnl pkg-config configuration
+-PKG_CHECK_MODULES(DEP, gtksourceview-2.0)
+-AC_SUBST(DEP_CFLAGS)
+-AC_SUBST(DEP_LIBS)
++GTKSOURCEVIEW_REQUIRED=2.4.0
++GIO_REQUIRED=2.18.0
++LIBGLADE_REQUIRED=2.6.0
++PKG_CHECK_MODULES(GSC, gtksourceview-2.0 >= $GTKSOURCEVIEW_REQUIRED gio-2.0 >= $GIO_REQUIRED libglade-2.0 >= $LIBGLADE_REQUIRED)
++AC_SUBST(GSC_CFLAGS)
++AC_SUBST(GSC_LIBS)
+ 
+ dnl Checks for programs.
+ AC_PROG_INSTALL
+@@ -33,7 +36,7 @@
+ 
+ GETTEXT_PACKAGE=gtksourcecompletion
+ AC_SUBST(GETTEXT_PACKAGE)
+-AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"],["Descripcion"])
++AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"],["Competion library"])
+ 
+ ALL_LINGUAS="es fr it"
+ AM_GLIB_GNU_GETTEXT
+Index: docs/reference/Makefile.am
+===================================================================
+--- docs/reference/Makefile.am	(revision 162)
++++ docs/reference/Makefile.am	(working copy)
+@@ -1,4 +1,4 @@
+-GTKDOC_CFLAGS = -I$(top_srcdir) $(DEP_CFLAGS)
++GTKDOC_CFLAGS = -I$(top_srcdir) $(GSC_CFLAGS)
+ GTKDOC_LIBS = $(top_builddir)/gtksourcecompletion/libgtksourcecompletion-1.0.la
+ 
+ ## Process this file with automake to produce Makefile.in
+@@ -14,7 +14,7 @@
+ SCAN_OPTIONS = --rebuild-sections --rebuild-types
+ 
+ # The directory containing the source code. Relative to $(srcdir)
+-DOC_SOURCE_DIR = ../..
++DOC_SOURCE_DIR = ../../gtksourcecompletion/
+ 
+ # Used for dependencies
+ HFILE_GLOB = $(top_srcdir)/gtksourcecompletion/*.h
+Index: gtksourcecompletion/Makefile.am
+===================================================================
+--- gtksourcecompletion/Makefile.am	(revision 162)
++++ gtksourcecompletion/Makefile.am	(working copy)
+@@ -1,3 +1,5 @@
++NULL=
++
+ INCLUDES = \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+ 	-DGTK_SOURCE_COMPLETIONLOCALEDIR=\""$(gtksourcecompletionlocaledir)"\" \
+@@ -5,8 +7,8 @@
+ 	-DICON_DIR=\""$(datadir)/gtksourcecompletion/pixmaps"\"	\
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	$(PACKAGE_CFLAGS) \
+-	`pkg-config --cflags gtksourceview-2.0` \
+-	`pkg-config --cflags libglade-2.0`
++	$(GSC_CFLAGS) \
++	$(NULL)
+ 
+ AM_CFLAGS =\
+ 	 -Wall\
+@@ -52,11 +54,13 @@
+ 	
+ 
+ libgtksourcecompletion_1_0_la_LIBADD = \
+-	$(PACKAGE_LIBS) 
++	$(PACKAGE_LIBS) \
++	$(GSC_LIBS) \
++	$(NULL)
+ 	
+ libgtksourcecompletion_1_0_la_LDFLAGS = \
+ 	-version-info 1:0:0 	\
+-	`pkg-config --libs gtksourceview-2.0`
++	$(NULL)
+ 
+ INST_H_FILES = \
+ 	gsc-provider.h			\
+Index: test/Makefile.am
+===================================================================
+--- test/Makefile.am	(revision 162)
++++ test/Makefile.am	(working copy)
+@@ -1,25 +1,29 @@
+-bin_PROGRAMS = gio-test completion-demo testtooltips
++NULL=
+ 
++bin_PROGRAMS = gio-test completion-demo
++# testtooltips
++
+ INCLUDES=	\
+ 	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	-I$(top_srcdir)/gtksourcecompletion	\
+-	`pkg-config --cflags gtksourceview-2.0` \
+-	`pkg-config --cflags gio-2.0` \
+-	$(PACKAGE_CFLAGS)
++	$(PACKAGE_CFLAGS) \
++	$(GSC_CFLAGS) \
++	$(NULL)
+ 
+ AM_CFLAGS = \
+ 	-Wall	
+ 
+-noinst_PROGRAMS = gio-test completion-demo testtooltips
++noinst_PROGRAMS = gio-test completion-demo 
++#testtooltips
+ 
+ gio_test_SOURCES = 		\
+ 	gio-test.c
+ 
+ gio_test_LDFLAGS =  \
+-	`pkg-config --libs gtksourceview-2.0`	\
+-	`pkg-config --libs gio-2.0`
++	$(GSC_CFLAGS) \
++	$(NULL)
+ 
+ gio_test_LDADD = 	\
+ 	$(top_builddir)/gtksourcecompletion/libgtksourcecompletion-1.0.la	\
+@@ -31,8 +35,8 @@
+ 	gsc-trigger-dotexample.c
+ 
+ completion_demo_LDFLAGS =  \
+-	`pkg-config --libs gtksourceview-2.0`	\
+-	`pkg-config --libs gio-2.0`
++	$(GSC_CFLAGS) \
++	$(NULL)
+ 
+ completion_demo_LDADD = 	\
+ 	$(top_builddir)/gtksourcecompletion/libgtksourcecompletion-1.0.la	\
+@@ -42,8 +46,8 @@
+ 	testtooltips.c
+ 
+ testtooltips_LDFLAGS =  \
+-	`pkg-config --libs gtksourceview-2.0`	\
+-	`pkg-config --libs gio-2.0`
++	$(GSC_CFLAGS) \
++	$(NULL)
+ 
+ testtooltips_LDADD = 	\
+ 	$(top_builddir)/gtksourcecompletion/libgtksourcecompletion-1.0.la	\

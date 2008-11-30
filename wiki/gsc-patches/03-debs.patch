@@ -1,0 +1,11 @@
+
+Property changes on: debian/libgtksourcecompletion1.0-0.install
+___________________________________________________________________
+Added: svn:mergeinfo
+
+Index: debian/libgtksourcecompletion1.0.install
+===================================================================
+--- debian/libgtksourcecompletion1.0.install	(revision 162)
++++ debian/libgtksourcecompletion1.0.install	(working copy)
+@@ -1 +0,0 @@
+-debian/tmp/usr/lib/lib*.so.*
