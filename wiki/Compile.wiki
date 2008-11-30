@@ -24,11 +24,11 @@ svn checkout https://gtksourcecomple.svn.sourceforge.net/svnroot/gtksourcecomple
 }}}
 
 with this patches applied:
-[http://vtg.googlecode.com/svn/wiki/gsc-patches/01-build.patch 01-build.patch]
-02-focus-fix.patch
+  * [http://vtg.googlecode.com/svn/wiki/gsc-patches/01-build.patch 01-build.patch]
+  * [http://vtg.googlecode.com/svn/wiki/gsc-patches/02-focus-fix.patch 02-focus-fix.patch]
 
 and if you are on a debian system and you want to build deb archives:
-03-debs.patch 
+  * [http://vtg.googlecode.com/svn/wiki/gsc-patches/03-debs.patch 03-debs.patch ]
 
 Patch Gsc with these commands from the gsc root source folder:
 {{{
