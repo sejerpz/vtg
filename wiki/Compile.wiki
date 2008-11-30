@@ -40,8 +40,8 @@ patch -p0 < 03-debs.patch
 You can compile _Vtg_ with:
 
 {{{
-./configure --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
-./make
+./autogen.sh --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+make
 }}}
 
 == Installing ==
