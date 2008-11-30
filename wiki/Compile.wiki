@@ -6,7 +6,7 @@
  * glib (at least 2.12.0)
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
- * patched gtksourcecompletion (svn trunk at least rev. 162) see compiling http://gtksourcecomple.sourceforge.net/
+ * *patched* gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (svn trunk at least rev. 162 see compiling)
  * gnome build framework (at least 2.23.90) 
  * vala 0.5.2 (svn trunk)
 
