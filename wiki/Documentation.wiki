@@ -14,8 +14,6 @@ So don't expect the usual attention to the details that a typical GNOME applicat
 
 This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What remains to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
 
-A _Configure_ window where all the provided modules can be selectively activated and where the keybinding could be changed it's planned but not yet coded.
-
 == Project Manager ==
 
 Vtg supports autotools project with the help of the gnome build framework (aka libgbf) library, the same actually used by the Anjuta IDE.
@@ -24,10 +22,15 @@ It doesn't expose to the user of the libgbf's functionalities, so you still have
 
 === Working with projects ===
 
-You can select a project with the menu item File -> Open project...
-
+You can open a project or create a new one with the menu item _File -> Open project..._ or _File -> New project..._.
 
 http://vtg.googlecode.com/svn/wiki/doc-images/open-project.png
+
+If you choose to create a new project a project creation dialog like this one will be shown:
+
+http://vtg.googlecode.com/svn/wiki/doc-images/gen-project.png
+
+In this window you can chose the project license, the project author and type among the other options.
 
 After that you can see the project files on the right panel
 
@@ -110,3 +113,28 @@ With the help of the symbol completion engine a function similar to the _Quick j
 http://vtg.googlecode.com/svn/wiki/doc-images/method-jump.png
 
 As for the 'source file' one it's possibile to use '{{{*}}}' and '?' as wildcard chars.
+
+== Vala toys configuration ==
+
+=== Configuration window ===
+
+When the _configure_ button is clicked in the gEdit plugin configuration window a simple dialog like this one will be shown:
+
+http://vtg.googlecode.com/svn/wiki/doc-images/config-dialog.png
+
+In this dialog is you can selectivly activate or deactivate the Vtg modules like _symbol completion_ or _bracket completion_
+
+=== Changing the default menu' keybindings ===
+
+_Vtg_ menu' are usually bindend with some keyboard shortcuts that improve greatly the speed and the comfort when using these function.
+
+However keyboard shortcut are usually subject to personal preference, so they can be customized individually.
+
+_Vtg_ uses the standard Gtk+ way to customize menu' keyboard shortcut, so you can configure them with these simple steps:
+
+  # Enable the menu' customization function with the corresponding check in the _Appearance Preference_ dialog
+  # Open gEdit select the menu' that you want to change
+  # Press the new keys combination on the keyboard with menu' item selected
+  # That's all :)
+
+http://vtg.googlecode.com/svn/wiki/doc-images/gnome-appearence.png
