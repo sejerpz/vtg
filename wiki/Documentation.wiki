@@ -132,7 +132,7 @@ However keyboard shortcut are usually subject to personal preference, so they ca
 
 _Vtg_ uses the standard Gtk+ way to customize menu' keyboard shortcut, so you can configure them with these simple steps:
 
-  # Enable the menu' customization function with the corresponding check in the _Appearance Preference_ dialog
+  # Enable the menu' customization function with the corresponding check in the GNOME _Appearance Preference_ dialog (on my Debian system is under _System -> Preferences_)
   # Open gEdit select the menu' that you want to change
   # Press the new keys combination on the keyboard with menu' item selected
   # That's all :)
