@@ -6,7 +6,7 @@
  * glib (at least 2.12.0)
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
- * *patched* gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (svn trunk at least rev. 162 see compiling)
+ * gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (svn trunk at least rev. 163)
  * gnome build framework (at least 2.23.90) 
  * vala 0.5.2 (svn trunk)
 
@@ -23,18 +23,12 @@ Then the gtksourcecomplete sources:
 svn checkout https://gtksourcecomple.svn.sourceforge.net/svnroot/gtksourcecomple/gtksourcecompletion/trunk 
 }}}
 
-with this patches applied:
-  * [http://vtg.googlecode.com/svn/wiki/gsc-patches/01-build.patch 01-build.patch]
-  * [http://vtg.googlecode.com/svn/wiki/gsc-patches/02-focus-fix.patch 02-focus-fix.patch]
+and compile it with the usual:
 
-and if you are on a debian system and you want to build deb archives:
-  * [http://vtg.googlecode.com/svn/wiki/gsc-patches/03-debs.patch 03-debs.patch ]
-
-Patch Gsc with these commands from the gsc root source folder:
 {{{
-patch -p0 < 01-build.patch
-patch -p0 < 02-focus-fix.patch
-patch -p0 < 03-debs.patch 
+./autogen.sh
+make
+make install
 }}}
 
 You can compile _Vtg_ with:
