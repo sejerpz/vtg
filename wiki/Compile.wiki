@@ -7,8 +7,9 @@
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
  * gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (svn trunk at least rev. 163)
- * gnome build framework (at least 2.23.90) 
- * vala 0.5.2 (svn trunk)
+ * gnome build framework (at least 2.23.90)
+ * gnu readline (required only for vsc-shell)
+ * vala 0.5.2
 
 == Compiling ==
 
