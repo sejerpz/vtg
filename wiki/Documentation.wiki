@@ -57,6 +57,7 @@ In the _Build_ menu you have the commands for:
   * _Build project_: build the project executing the make command on the project root folder
   * _Clean project_: clean the project executing the 'make clean' command on the project root folder
   * _Clean Project and Vala stamp files_: this is peculiar on how vala currently uses autotools thus this menu will clean the project as the previous one, also it will remove all the {{{*}}}.stamp file presents in the vala folder
+  * _Compile File_: compile a _standalone_ file, a file that do not belong to any current opened project, executing the vala compiler directly
   * _Next Error_ / _Previous Error_: will jump to the source location of the next / previous error
   * _Execute_: will execute the first builded program of the project (at the moment)
   * _Stop process_: will stop (kill) the last executed program
