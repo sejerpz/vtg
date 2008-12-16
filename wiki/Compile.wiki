@@ -6,33 +6,15 @@
  * glib (at least 2.12.0)
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
- * gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (svn trunk at least rev. 163)
+ * gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (at least 0.5.2)
  * gnome build framework (at least 2.23.90)
  * gnu readline (required only for vsc-shell)
- * vala 0.5.2
+ * vala 0.5.3
 
 == Compiling ==
 
-First at the moment you need vala compiler 0.5.2 - trunk:
-
-{{{
-svn checkout http://svn.gnome.org/svn/vala/trunk
-}}}
-
-Then the gtksourcecomplete sources:
-{{{
-svn checkout https://gtksourcecomple.svn.sourceforge.net/svnroot/gtksourcecomple/gtksourcecompletion/trunk 
-}}}
-
-and compile it with the usual:
-
-{{{
-./autogen.sh
-make
-make install
-}}}
-
-You can compile _Vtg_ with:
+Having installed the required dependecies build,
+you can compile _Vtg_ with:
 
 {{{
 ./autogen.sh --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
@@ -41,7 +23,13 @@ make
 
 == Installing ==
 
-From the root folder of Vtg distribution:
+To makes _Vtg_ available to all the user in the system just do:
+
+{{{
+make install
+}}}
+
+To install is just for the current account, from the root folder of the Vtg distribution, do:
 
 {{{
 mkdir ~/.gnome2/gedit/plugins/vtg
