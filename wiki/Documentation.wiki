@@ -9,8 +9,7 @@ To do it Vtg gives to the developer a list of tied integrated tools to use like 
 
 Also it tries to minimize the use of mouse during the development.
 
-To be clear: at the moment _vala toys_ it's *not* a finished product nor in a 0.1 version shape, but I hope it will be soon.
-So don't expect the usual attention to the details that a typical GNOME application has.
+To be clear: at the moment _vala toys_ it's *not yet* a finished product.
 
 This page documents what Vtg _already_ can do and these will be all the features included in version 0.1. What remains to do is a lot of refactoring and code cleanups a lot of bug fixing and minor architectural enhancements.
 
@@ -57,6 +56,7 @@ In the _Build_ menu you have the commands for:
   * _Build project_: build the project executing the make command on the project root folder
   * _Clean project_: clean the project executing the 'make clean' command on the project root folder
   * _Clean Project and Vala stamp files_: this is peculiar on how vala currently uses autotools thus this menu will clean the project as the previous one, also it will remove all the {{{*}}}.stamp file presents in the vala folder
+  * _Configure Project_: run the current project configure script
   * _Compile File_: compile a _standalone_ file, a file that do not belong to any current opened project, executing the vala compiler directly
   * _Next Error_ / _Previous Error_: will jump to the source location of the next / previous error
   * _Execute_: will execute the first builded program of the project (at the moment)
@@ -70,7 +70,18 @@ Moreover Vtg tries to interpret the Vala compiler warning and error messages and
 
 http://vtg.googlecode.com/svn/wiki/doc-images/build-results.png
 
-It's worth to notice that when executing a program its standrd input, output and error will be connected to the _Output_ page so it can be possible to interat with the target program.
+It's worth to notice that when executing a program its standard input, output and error will be connected to the _Output_ page so it can be possible to interact with the target program.
+
+=== Tools Menu ===
+
+(to be released)
+
+In version 0.3.0 Vtg as gained the possibility to prepare the changelog entry right before checking in or after editing each file.
+
+In the _Tools_ menu' there are two items:
+
+  * _Add current file to ChangeLog _: this will add the current filename to the top changelog entry. A new entry will be created if date, author or email aren't the same.
+  * _Prepare ChangeLog _: this function works only if the current project is under some supported (currently svn, git, bzr) source code management tool. It prepares a changelog entry based on the status of each file as reported by the scm status command.
 
 === Quick jump to a project source ===
 
