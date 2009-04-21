@@ -8,7 +8,7 @@ _Last released version:_
  * glib (at least 2.12.0)
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
- * gtksourcecompletion http://gtksourcecomple.sourceforge.net/ (at least 0.5.2)
+ * gtksourcecompletion 0.5.2 - http://github.com/chuchiperriman/gtksourcecompletion/downloads
  * gnu readline (required only for vsc-shell)
  * vala 0.5.7
 
@@ -17,7 +17,7 @@ _Svn trunk version as 19.04.2009_
  * glib (at least 2.12.0)
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
- * gtksourcecompletion 0.7.0 GIT - git://github.com/chuchiperriman/gtksourcecompletion.git - (master commit 8895c4ad2f18f5dde8dc8d98952eb1032483e050)
+ * gtksourcecompletion 0.7.0 - http://github.com/chuchiperriman/gtksourcecompletion/downloads
  * gnu readline (required only for vsc-shell)
  * vala 0.7.x GIT - git://git.gnome.org/vala - (master commit 66ee67c85209b6cbc8f488c2bd003b0bc3a9fc3b)
 
