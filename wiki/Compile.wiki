@@ -42,7 +42,7 @@ make
 
 == Installing ==
 
-To makes _Vtg_ available to all the user in the system just do:
+To makes _Vtg_ available to all the users in the system just do:
 
 {{{
 make install
