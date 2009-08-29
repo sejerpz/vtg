@@ -42,13 +42,7 @@ make
 
 == Installing ==
 
-To makes _Vtg_ available to all the users in the system just do:
-
-{{{
-make install
-}}}
-
-To install is just for the current account, from the root folder of the _Vtg_ distribution, do:
+To install for the current user, from the root folder of the _Vtg_ distribution, do:
 
 {{{
 mkdir ~/.gnome2/gedit/plugins/vtg
