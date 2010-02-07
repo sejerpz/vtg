@@ -8,7 +8,7 @@ _Last released version:_
  * glib (at least 2.12.0)
  * gtk+ (at least 2.10.0)
  * gedit (at least 2.22.0)
- * gtksourcecompletion 0.7.0 - http://github.com/chuchiperriman/gtksourcecompletion/downloads
+ * ~~gtksourcecompletion 0.7.0 - ~~: it's now included in the source distribution
  * gnu readline (required only for vsc-shell)
  * vala 0.7.7
 
