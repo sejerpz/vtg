@@ -30,6 +30,21 @@ or with this if you checked out vtg from the svn repository:
 make
 }}}
 
+*TIP*
+
+If you get this error on a 64bit system
+{{{
+/usr/bin/ld: ../gsc-0.7.0/gtksourcecompletion/.libs/libgtksourcecompletion-2.0.a(gsc-provider.o): relocation R_X86_64_32S against `.text' can not be used when making a shared object; recompile with -fPIC
+../gsc-0.7.0/gtksourcecompletion/.libs/libgtksourcecompletion-2.0.a: could not read symbols: Bad value
+collect2: ld returned 1 exit status
+}}}
+
+try to recompile with CFLAGS specified:
+
+{{{
+make CFLAGS="-g -O2 -fPIC"
+}}}
+
 
 == Installing ==
 
