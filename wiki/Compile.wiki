@@ -52,7 +52,7 @@ To install for the current user, from the root folder of the _Vtg_ distribution,
 
 {{{
 mkdir ~/.gnome2/gedit/plugins/vtg
-cp -r images/ ~/.gnome2/gedit/plugins/vtg/
+cp -r images ~/.gnome2/gedit/plugins/vtg/
 mkdir ~/.gnome2/gedit/plugins/vtg/ui
 cp ui/vtg.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
 cp vtg/vtg.gedit-plugin ~/.gnome2/gedit/plugins/
