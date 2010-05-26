@@ -51,7 +51,7 @@ make CFLAGS="-g -O2 -fPIC"
 To install for the current user, from the root folder of the _Vtg_ distribution, do:
 
 {{{
-mkdir ~/.gnome2/gedit/plugins/vtg
+mkdir -p ~/.gnome2/gedit/plugins/vtg
 cp -r images ~/.gnome2/gedit/plugins/vtg/
 mkdir ~/.gnome2/gedit/plugins/vtg/ui
 cp ui/vtg.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
