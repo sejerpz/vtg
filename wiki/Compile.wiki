@@ -30,6 +30,19 @@ or with this if you checked out vtg from the svn repository:
 make
 }}}
 
+*Alternative method*
+
+To workaround the [http://code.google.com/p/vtg/issues/detail?id=135 issue 135], caused by the inconsistent generation of the configure script by different version of autotools, I have included in the repository the files required to compile without using autogen.sh.
+
+In this case to compile vtg you should use:
+{{{
+aclocal
+automake --add-missing
+intltoolize --force
+./configure --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+make
+}}}
+
 *TIP*
 
 If you get this error on a 64bit system
