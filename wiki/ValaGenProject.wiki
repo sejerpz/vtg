@@ -9,7 +9,7 @@ Vala GenProject is an utility that helps creating project skeletons for Vala pro
 
 Vala GenProject includes a Gtk+ UI and a command line interface and its usage is pretty simple, just select the wanted template, complete the dialog with the required information like author email and license, and click on the generate button.
 
-= Screeshot =
+=== Screeshot ===
 
 You can see Vala GenProject here
 
