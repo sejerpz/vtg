@@ -1,0 +1,39 @@
+== How to compile and install Vala Toys for GEdit ==
+
+For an updated version of this document go to:
+
+http://code.google.com/p/vtg/wiki/Compile
+
+== Prerequisites ==
+
+ * glib (at least 2.12.0)
+ * gtk+ (at least 2.10.0)
+ * gedit (at least 2.22.0)
+ * gtksourcecompletion 0.7.0 - http://github.com/chuchiperriman/gtksourcecompletion/downloads
+ * gnu readline (required only for vsc-shell)
+ * vala 0.7.5
+
+== Compiling ==
+
+Having installed the required dependecies,
+you can compile _Vtg_ with this command if you downloaded the source tarball:
+
+./configure --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+make
+
+or if you checked out vtg from the svn repository do:
+
+./autogen.sh --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+make
+
+
+== Installing ==
+
+To install just for the current user, from the root folder of the _Vtg_ distribution, do:
+
+mkdir ~/.gnome2/gedit/plugins/vtg
+cp -r images/ ~/.gnome2/gedit/plugins/vtg/
+mkdir ~/.gnome2/gedit/plugins/vtg/ui
+cp ui/vtg.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
+cp vtg/vtg.gedit-plugin ~/.gnome2/gedit/plugins/
+cp vtg/.libs/libvtg.so ~/.gnome2/gedit/plugins/
