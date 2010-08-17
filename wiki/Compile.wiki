@@ -12,9 +12,17 @@ _Last released version:_
  * ~~gnu readline (required only for vsc-shell)~~ - no longer supported
  * vala 0.9.4
 
+== Standard compile instruction for system-wide installation (EASIER)==
 
-== Compiling ==
+{{{
+./configure --prefix=/usr
+make
+sudo make install
+}}}
 
+== Local User installation and other installation tips (DIFFICULT) ==
+
+==Compiling==
 Having installed the required dependecies,
 you can compile _Vtg_ with this command if you downloaded the source tarball:
 
@@ -59,7 +67,7 @@ make CFLAGS="-g -O2 -fPIC"
 }}}
 
 
-== Installing ==
+=== Installing ===
 
 To install for the current user, from the root folder of the _Vtg_ distribution, do:
 
@@ -70,4 +78,22 @@ mkdir ~/.gnome2/gedit/plugins/vtg/ui
 cp ui/vtg.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
 cp vtg/vtg.gedit-plugin ~/.gnome2/gedit/plugins/
 cp vtg/.libs/libvtg.so ~/.gnome2/gedit/plugins/
+}}}
+
+The required files to install & integrate vala-gen-project with vtg:
+
+{{{
+mkdir -p ~/.gnome2/gedit/plugins/vtg/templates
+cp -r gen-project/templates/*.ini  ~/.gnome2/gedit/plugins/vtg/
+cp -r gen-project/templates/*.png  ~/.gnome2/gedit/plugins/vtg/
+cp -r gen-project/templates/*.tar.gz  ~/.gnome2/gedit/plugins/vtg/
+mkdir -p ~/.gnome2/gedit/plugins/vtg/licenses
+cp -r gen-project/licenses/*.txt ~/.gnome2/gedit/plugins/vtg/licenses/
+cp gen-project/ui/gen-project.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
+}}}
+
+Now we have to copy vala-gen-project from the gen-project folder to one included in the executable path (eg. /usr/local/bin)
+
+{{{
+sudo cp gen-project/vala-gen-project /usr/local/bin
 }}}
