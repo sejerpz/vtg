@@ -84,11 +84,11 @@ The required files to install & integrate vala-gen-project with vtg:
 
 {{{
 mkdir -p ~/.gnome2/gedit/plugins/vtg/templates
-cp -r gen-project/templates/*.ini  ~/.gnome2/gedit/plugins/vtg/
-cp -r gen-project/templates/*.png  ~/.gnome2/gedit/plugins/vtg/
-cp -r gen-project/templates/*.tar.gz  ~/.gnome2/gedit/plugins/vtg/
+cp gen-project/templates/*.ini  ~/.gnome2/gedit/plugins/vtg/templates/
+cp gen-project/templates/*.png  ~/.gnome2/gedit/plugins/vtg/templates/
+cp gen-project/templates/*.tar.gz  ~/.gnome2/gedit/plugins/vtg/templates/
 mkdir -p ~/.gnome2/gedit/plugins/vtg/licenses
-cp -r gen-project/licenses/*.txt ~/.gnome2/gedit/plugins/vtg/licenses/
+cp gen-project/licenses/*.txt ~/.gnome2/gedit/plugins/vtg/licenses/
 cp gen-project/ui/gen-project.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
 }}}
 
