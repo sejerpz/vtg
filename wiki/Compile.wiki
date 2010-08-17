@@ -12,7 +12,7 @@ _Last released version:_
  * ~~gnu readline (required only for vsc-shell)~~ - no longer supported
  * vala 0.9.4
 
-== Standard compile instruction for system-wide installation (EASIER)==
+== Standard compile instruction for system-wide installation (easy)==
 
 {{{
 ./configure --prefix=/usr
@@ -20,7 +20,7 @@ make
 sudo make install
 }}}
 
-== Local User installation and other installation tips (DIFFICULT) ==
+== Local User installation and other installation tips (not always easy) ==
 
 ==Compiling==
 Having installed the required dependecies,
