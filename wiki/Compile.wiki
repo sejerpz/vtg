@@ -10,7 +10,7 @@ _Last released version:_
  * gedit (at least 2.22.0)
  * ~~gtksourcecompletion 0.7.0 - ~~  - no longer required
  * ~~gnu readline (required only for vsc-shell)~~ - no longer supported
- * vala 0.9.4
+ * vala 0.9.5
 
 == Standard compile instruction for system-wide installation (easy)==
 
