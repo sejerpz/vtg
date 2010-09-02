@@ -27,14 +27,14 @@ Having installed the required dependecies,
 you can compile _Vtg_ with this command if you downloaded the source tarball:
 
 {{{
-./configure --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+./configure --prefix=$HOME/.gnome2/gedit/plugins --datadir=$HOME/.gnome2/gedit/plugins
 make
 }}}
 
 or with this if you checked out vtg from the svn repository:
 
 {{{
-./autogen.sh --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+./autogen.sh --prefix=$HOME/.gnome2/gedit/plugins --datadir=$HOME/.gnome2/gedit/plugins
 make
 }}}
 
@@ -47,7 +47,7 @@ In this case to compile vtg you should use:
 aclocal
 automake --add-missing
 intltoolize --force
-./configure --prefix="your home dir"/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+./configure --prefix=$HOME/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
 make
 }}}
 
