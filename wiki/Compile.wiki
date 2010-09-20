@@ -1,6 +1,13 @@
 #labels Phase-Deploy,Featured
 #How to compile and install Vala Toys for GEdit
 
+== Svn repositories ==
+
+To date (Sep, 20 2010) there are two main branch in the Vala Toys svn repository:
+
+ * the *trunk* that follows vala master branch development
+ * the *vtg_0_10_x* branch that follows valac version 0.10.x
+
 == Prerequisites ==
 
 _Last released version:_
@@ -10,7 +17,7 @@ _Last released version:_
  * gedit (at least 2.22.0)
  * ~~gtksourcecompletion 0.7.0 - ~~  - no longer required
  * ~~gnu readline (required only for vsc-shell)~~ - no longer supported
- * vala 0.9.5
+ * vala 0.9.5 for the svn branch 0.10.x
 
 == Standard compile instruction for system-wide installation (easy)==
 
