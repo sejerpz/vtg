@@ -1,5 +1,5 @@
 #labels Phase-Deploy,Featured
-#How to compile and install Vala Toys for GEdit
+= How to compile and install Vala Toys for GEdit =
 
 == Prerequisites ==
 
