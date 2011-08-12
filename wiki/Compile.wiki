@@ -1,23 +1,14 @@
 #labels Phase-Deploy,Featured
 #How to compile and install Vala Toys for GEdit
 
-== Svn repositories ==
-
-To date (Sep, 20 2010) there are two main branch in the Vala Toys svn repository:
-
- * the *trunk* that follows vala master branch development
- * the *vtg_0_10_x* branch that follows valac version 0.10.x
-
 == Prerequisites ==
 
 _Last released version:_
 
- * glib (at least 2.12.0)
- * gtk+ (at least 2.18.0)
- * gedit (at least 2.28.0)
- * ~~gtksourcecompletion 0.7.0 - ~~  - no longer required
- * ~~gnu readline (required only for vsc-shell)~~ - no longer supported
- * vala 0.9.5 for the svn branch 0.10.x
+  * glib (at least 2.28.0)
+  * gtk+ (at least 3.0)
+  * gedit (at least 3.0)
+  * vala 0.12 (0.14 is not supporter yet)
 
 == Standard compile instruction for system-wide installation (easy)==
 
@@ -34,14 +25,14 @@ Having installed the required dependecies,
 you can compile _Vtg_ with this command if you downloaded the source tarball:
 
 {{{
-./configure --prefix=$HOME/.gnome2/gedit/plugins --datadir=$HOME/.gnome2/gedit/plugins
+./configure --prefix=$HOME/.local
 make
 }}}
 
 or with this if you checked out vtg from the svn repository:
 
 {{{
-./autogen.sh --prefix=$HOME/.gnome2/gedit/plugins --datadir=$HOME/.gnome2/gedit/plugins
+./autogen.sh --prefix=$HOME/.local
 make
 }}}
 
@@ -54,7 +45,7 @@ In this case to compile vtg you should use:
 aclocal
 automake --add-missing
 intltoolize --force
-./configure --prefix=$HOME/.gnome2/gedit/plugins --datadir="your home dir"/.gnome2/gedit/plugins
+./configure --prefix=$HOME/.local
 make
 }}}
 
@@ -76,31 +67,26 @@ make CFLAGS="-g -O2 -fPIC"
 
 === Installing ===
 
+==== Step 1 ====
 To install for the current user, from the root folder of the _Vtg_ distribution, do:
 
 {{{
-mkdir -p ~/.gnome2/gedit/plugins/vtg
-cp -r images ~/.gnome2/gedit/plugins/vtg/
-mkdir ~/.gnome2/gedit/plugins/vtg/ui
-cp ui/vtg.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
-cp vtg/vtg.gedit-plugin ~/.gnome2/gedit/plugins/
-cp vtg/.libs/libvtg.so ~/.gnome2/gedit/plugins/
+make install
 }}}
 
-The required files to install & integrate vala-gen-project with vtg:
-
-{{{
-mkdir -p ~/.gnome2/gedit/plugins/vtg/templates
-cp gen-project/templates/*.ini  ~/.gnome2/gedit/plugins/vtg/templates/
-cp gen-project/templates/*.png  ~/.gnome2/gedit/plugins/vtg/templates/
-cp gen-project/templates/*.tar.gz  ~/.gnome2/gedit/plugins/vtg/templates/
-mkdir -p ~/.gnome2/gedit/plugins/vtg/licenses
-cp gen-project/licenses/*.txt ~/.gnome2/gedit/plugins/vtg/licenses/
-cp gen-project/ui/gen-project.ui ~/.gnome2/gedit/plugins/vtg/ui/ 
-}}}
-
+==== Step 2 ====
 Now we have to copy vala-gen-project from the gen-project folder to one included in the executable path (eg. /usr/local/bin)
 
 {{{
 sudo cp gen-project/vala-gen-project /usr/local/bin
+}}}
+
+Or *in alternative* add $HOME/.local/bin in front of your $PATH variable
+
+==== Step 3 ====
+Finally, because of this GSetting limit [http://bugzilla.gnome.org/show_bug.cgi?id=649717 Bug 649717], we have to copy the schema file and updated (compile) the schema cache. From the vala toys source folder:
+
+{{{
+sudo cp data/org.gnome.gedit.plugins.vala-toys.gschema.xml  /usr/share/glib-2.0/schemas/
+sudo glib-compile-schemas
 }}}
